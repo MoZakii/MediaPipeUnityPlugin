@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-
+//using System.Linq;
+//using UnityEngine;
 using Edge = System.Tuple<int ,int>;
 
 namespace Mediapipe {
@@ -36,6 +37,56 @@ namespace Mediapipe {
 
     protected override int NodeSize {
       get { return 33; }
+        }
+      /*  private List<GameObject> Nodes;
+        private bool isEmpty(NormalizedLandmarkList landmarkList)
+        {
+            return landmarkList.Landmark.All(landmark => {
+                return landmark.X == 0 && landmark.Y == 0 && landmark.Z == 0;
+            });
+        }
+       
+        public new void Draw(Transform screenTransform, NormalizedLandmarkList landmarkList, bool isFlipped = false)
+        {
+            if (isEmpty(landmarkList))
+            {
+                Clear();
+                return;
+            }
+
+            for (var i = 0; i < NodeSize; i++)
+            {
+                var landmark = landmarkList.Landmark[i];
+                var node = Nodes[i];
+
+              
+            }
+
+            for (var i = 0; i < EdgeSize; i++)
+            {
+                var connection = Connections[i];
+                
+                //var a = Nodes[connection.Item1];
+                //var b = Nodes[connection.Item2];
+                var c = Nodes[12];
+                var d = Nodes[14];
+                
+
+                float distance =
+                Vector3.Distance(c.transform.position, d.transform.position); //Change Scale
+                GameObject RightArm = GameObject.Find("/unitychan/Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_Spine2/Character1_RightShoulder/Character1_RightArm");
+                
+
+                RightArm.transform.localScale = new Vector3(1, 1, 1);
+                //         RightArm.transform.localScale = new Vector3(InitialScale.x, distance / 2f, InitialScale.z); //2 for object
+
+                Vector3 middlePoint = (c.transform.position + d.transform.position) / 2f; //Change Position
+
+                RightArm.transform.position = middlePoint;
+
+                Vector3 rotationDirection = (c.transform.position - d.transform.position); //Change Rotation
+
+                */
+            
     }
-  }
 }

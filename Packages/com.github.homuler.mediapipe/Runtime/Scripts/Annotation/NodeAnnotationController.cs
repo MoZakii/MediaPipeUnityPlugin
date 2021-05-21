@@ -18,7 +18,8 @@ namespace Mediapipe {
     /// </remarks>
     public void Draw(Transform screenTransform, NormalizedLandmark point, bool isFlipped = false, float scale = 0.5f) {
       gameObject.transform.position = GetPosition(screenTransform, point, isFlipped);
-      gameObject.transform.localScale = scale * Vector3.one;
+            gameObject.transform.localScale = scale * Vector3.one;
+            //Debug.Log(gameObject.transform.position);
     }
 
     /// <summary>
@@ -34,6 +35,7 @@ namespace Mediapipe {
     public void Draw(Transform screenTransform, LocationData.Types.RelativeKeypoint point, bool isFlipped = false, float scale = 0.3f) {
       gameObject.transform.position = GetPosition(screenTransform, point, isFlipped);
       gameObject.transform.localScale = scale * Vector3.one;
-    }
+           // Debug.Log(gameObject.transform.position);
+        }
   }
 }
